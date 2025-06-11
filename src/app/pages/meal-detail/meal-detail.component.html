@@ -1,0 +1,59 @@
+<div *ngIf="meal" class="container my-4">
+  <h2 class="mb-4">{{ meal?.strMeal }}</h2>
+
+  <div class="row mb-3">
+    <div class="col-md-4"><strong>ID del Platillo:</strong> {{ meal?.idMeal }}</div>
+    <div class="col-md-4"><strong>Nombre Alternativo:</strong> {{ meal?.strMealAlternate || 'N/A' }}</div>
+    <div class="col-md-4"><strong>Categoría:</strong> {{ meal?.strCategory }}</div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-4"><strong>Área:</strong> {{ meal?.strArea }}</div>
+    <div class="col-md-8"><strong>Etiquetas:</strong> {{ meal?.strTags || 'N/A' }}</div>
+  </div>
+
+  <div class="mb-4">
+    <strong>Instrucciones:</strong>
+    <p>{{ meal?.strInstructions }}</p>
+  </div>
+
+  <div class="mb-4">
+    <img [src]="meal?.strMealThumb" alt="{{ meal?.strMeal }}" class="img-fluid rounded" />
+  </div>
+
+  <div class="mb-3">
+    <strong>Video de preparación:</strong>
+    <a [href]="meal?.strYoutube" target="_blank">{{ meal?.strYoutube }}</a>
+  </div>
+
+  <h4>Ingredientes y Cantidades</h4>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+    <div class="col" *ngIf="meal?.strIngredient1"><p><strong>Ingrediente 1:</strong> {{ meal?.strIngredient1 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure1 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient2"><p><strong>Ingrediente 2:</strong> {{ meal?.strIngredient2 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure2 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient3"><p><strong>Ingrediente 3:</strong> {{ meal?.strIngredient3 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure3 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient4"><p><strong>Ingrediente 4:</strong> {{ meal?.strIngredient4 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure4 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient5"><p><strong>Ingrediente 5:</strong> {{ meal?.strIngredient5 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure5 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient6"><p><strong>Ingrediente 6:</strong> {{ meal?.strIngredient6 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure6 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient7"><p><strong>Ingrediente 7:</strong> {{ meal?.strIngredient7 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure7 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient8"><p><strong>Ingrediente 8:</strong> {{ meal?.strIngredient8 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure8 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient9"><p><strong>Ingrediente 9:</strong> {{ meal?.strIngredient9 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure9 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient10"><p><strong>Ingrediente 10:</strong> {{ meal?.strIngredient10 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure10 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient11"><p><strong>Ingrediente 11:</strong> {{ meal?.strIngredient11 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure11 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient12"><p><strong>Ingrediente 12:</strong> {{ meal?.strIngredient12 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure12 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient13"><p><strong>Ingrediente 13:</strong> {{ meal?.strIngredient13 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure13 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient14"><p><strong>Ingrediente 14:</strong> {{ meal?.strIngredient14 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure14 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient15"><p><strong>Ingrediente 15:</strong> {{ meal?.strIngredient15 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure15 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient16"><p><strong>Ingrediente 16:</strong> {{ meal?.strIngredient16 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure16 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient17"><p><strong>Ingrediente 17:</strong> {{ meal?.strIngredient17 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure17 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient18"><p><strong>Ingrediente 18:</strong> {{ meal?.strIngredient18 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure18 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient19"><p><strong>Ingrediente 19:</strong> {{ meal?.strIngredient19 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure19 }}</p></div>
+    <div class="col" *ngIf="meal?.strIngredient20"><p><strong>Ingrediente 20:</strong> {{ meal?.strIngredient20 }}</p><p><strong>Cantidad:</strong> {{ meal?.strMeasure20 }}</p></div>
+  </div>
+
+  <div class="mt-4">
+    <p><strong>Fuente:</strong> <a [href]="meal?.strSource" target="_blank">{{ meal?.strSource || 'N/A' }}</a></p>
+    <p><strong>Fuente de la imagen:</strong> {{ meal?.strImageSource || 'N/A' }}</p>
+    <p><strong>Creative Commons confirmado:</strong> {{ meal?.strCreativeCommonsConfirmed || 'N/A' }}</p>
+    <p><strong>Fecha de modificación:</strong> {{ meal?.dateModified || 'N/A' }}</p>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container text-center my-5">
+  <h1>Bienvenido a Nuestro Restaurante</h1>
+  <p class="lead">Disfruta de una experiencia culinaria única con platos frescos y ambiente acogedor.</p>
+  <button class="btn btn-primary mb-4">Reservar Mesa</button>
+</div>
+
+<app-carousel></app-carousel>
+
+<div class="container my-5">
+  <h2 class="text-center mb-4">Nuestros Servicios</h2>
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let service of services">
+      <app-card
+        [icon]="service.icon"
+        [title]="service.title"
+        [description]="service.description">
+      </app-card>
+    </div>
+  </div>
+</div>
